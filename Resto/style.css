@@ -570,3 +570,17 @@ text-align: center;
   }
 
   
+
+.box {
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+    background-color: #fff; 
+}
+
+.box:hover {
+    transform: scale(1.1); 
+    background-color: #00FF00; 
+}
+
+.box:hover h3 {
+    font-size: 1.2em; 
+}
