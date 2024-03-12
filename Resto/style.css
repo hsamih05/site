@@ -571,16 +571,138 @@ text-align: center;
 
   
 
-.box {
-    transition: transform 0.3s ease, background-color 0.3s ease; 
-    background-color: #fff; 
+.menu .box .imbox img {
+    transition: transform 0.3s ease; 
 }
 
-.box:hover {
-    transform: scale(1.1); 
-    background-color: #00FF00; 
+.menu .box .imbox img:hover {
+    transform: scale(1.1);
 }
 
-.box:hover h3 {
-    font-size: 1.2em; 
+.menu .box:hover {
+    background-color: rgb(141, 255, 41); 
+}
+
+
+.logo {
+    animation: changeColor 10s infinite; 
+}
+
+@keyframes changeColor {
+    0% { color: black; } 
+    20% { color: red; } 
+    40% { color: green; } 
+    60% { color: blue; } 
+    80% { color: purple; } 
+    100% { color: black; } 
+}
+
+
+
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+        padding: 10px 20px;
+    }
+
+    header .navbar li {
+        margin-left: 0px;
+    }
+
+    header .navbar li a {
+        text-decoration: none;
+        color: #111;
+        font-size: 1.6em;
+        font-weight: 300;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    header .navbar.active {
+        width: 100%;
+        height: calc(100% - 68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        background: #ffff;
+        align-items: center;
+    }
+
+    .menuToggle {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-image: url(./images/menu.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        background-size: 30px;
+    }
+
+    .menuToggle.active {
+        background-image: url(./images/close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-origin: center;
+    }
+
+    header.sticky .menuToggle {
+        filter: invert(1);
+    }
+
+    .banniere .contenu h2 {
+        font-size: 2em;
+    }
+
+    .row .col50 img {
+        margin-left: 18%;
+    }
+
+    .contenu p:nth-child(2) {
+        font-size: 1.2em;
+    }
+
+    .expert {
+        margin-top: 0px;
+    }
+
+    .menu {
+        margin-top: 0px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .banniere .contenu h2 {
+        font-size: 2.2em;
+        color: #fff;
+    }
+
+    .titre-text {
+        color: #000;
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    .temoignage h2 {
+        font-size: 1.1em;
+    }
+
+    .temoignage p {
+        text-align: center;
+    }
 }
